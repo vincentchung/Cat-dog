@@ -68,7 +68,8 @@ for imagePath in sorted(list(paths.list_images(args["dataset"]))):
 
 	# extract the class label from the image path and update the
 	# labels list
-	label = imagePath.split(os.path.sep)[-2]
+	#label = imagePath.split(os.path.sep)[-2]
+	label = imagePath.title.split('.')[0]
 	labels.append(label)
 	#print(imagePath)
 	#print("Label:"+label)
